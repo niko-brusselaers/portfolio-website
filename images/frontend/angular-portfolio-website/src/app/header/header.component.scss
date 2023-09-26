@@ -1,13 +1,13 @@
-$primary-gray: #354f52;
 $primary-blue: #2ec4b6;
-$secondary-gray: #2f3e46;
+$primary-purple: #04052e;
+$primary-yellow: #ffd500;
 
 .header{
     display: flex;
     justify-content: space-between;
     width: 100vw;
-    padding: 0em 5em;
-    background-color: $primary-gray;
+    background-color: $primary-purple;
+    opacity: .9;
 }
 
 a{
@@ -16,12 +16,12 @@ a{
     font-size: 1.5em;
     font-weight: 600;
     transition: all 0.3s ease-in-out;
-    padding: 2em;
+    padding: 5vh 2em;
 }
 
 a:hover{
     color: $primary-blue;
-    background-color: $secondary-gray;
+    background-color: yellow;
     
 }
 
