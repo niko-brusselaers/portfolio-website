@@ -1,6 +1,7 @@
-import server from "bunrest";
+import { Elysia,t } from "elysia";
 const { MongoClient } = require('mongodb');
-const app = server();
+
+const app = new Elysia()
 
 interface Project {
   name: string;
@@ -12,19 +13,25 @@ const mongoDBUrl = "mongodb+srv://expertLab:aspfEL@cluster0.ruiua.mongodb.net/"
 const client = new MongoClient(mongoDBUrl);
 
 //check if the server is running
-app.listen(3000, () => {
-  console.log('App is listening on port 3000');
-});
+
+
+app.get('/', () => {console.log("hello world")});
+
 
 // Get all projects
- app.get('/projects',async (req, res) => {
+ app.get('/projects',async ({set}) => {
+  console.log("get all projects");
+  
    try {
     await client.connect();
     const database = client.db("projects").collection("projects");
     const projects = await database.find({}).toArray();
-    res.status(200).json(projects);
+    set.status = 200;
+    return projects;
+    
    } catch (error) {
-    res.status(400).json(error);
+    set.status = 200;
+    return error;
    }
    finally {
     await client.close();
@@ -32,17 +39,24 @@ app.listen(3000, () => {
 });
 
 // save project to database
-app.post('/projects', (req, res) => {
+app.post('/projects', () => {
   //TODO: save project to mongodb database
+  
+  
 });
 
 
 // Update a project details
-app.put('/projects/:name', (req, res) => {
+app.put('/projects/:name', () => {
   //TODO: update project details inside mongodb database
 });
 
 // Delete a project from database
-app.delete('/projects/:name', (req, res) => {
+app.delete('/projects/:name', () => {
   //TODO: delete project from mongodb database
 });
+
+app.listen(3000, () => {
+  console.log('App is listening on port 3000');
+});
+

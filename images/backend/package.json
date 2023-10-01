@@ -1,16 +1,16 @@
-  {
-  "name": "bun_backend",
-  "module": "index.ts",
-  "type": "module",
+{
+  "name": "elysia",
+  "version": "1.0.50",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "bun run --watch src/index.ts"
+  },
+  "dependencies": {
+    "elysia": "latest",
+    "mongodb": "^6.1.0"
+  },
   "devDependencies": {
     "bun-types": "latest"
   },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
-  },
-  "dependencies": {
-    "bunrest": "^1.3.6",
-    "mongodb": "^6.1.0",
-    "mongoose": "^7.5.3"
-  }
+  "module": "src/index.js"
 }
