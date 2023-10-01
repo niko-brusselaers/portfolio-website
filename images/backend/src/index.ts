@@ -12,11 +12,11 @@ interface Project {
 const mongoDBUrl = "mongodb+srv://expertLab:aspfEL@cluster0.ruiua.mongodb.net/"
 const client = new MongoClient(mongoDBUrl);
 
-//check if the server is running
 
 
-app.get('/', () => {console.log("hello world")});
+app.group('/projects', app => app
 
+)
 
 // Get all projects
  app.get('/projects',async ({set}) => {
@@ -29,6 +29,7 @@ app.get('/', () => {console.log("hello world")});
     const database = client.db("projects").collection("projects");
     // Query the database for all projects
     const projects = await database.find({}).toArray();
+    
     // return the projects
     set.status = 200;
     return projects;
@@ -48,12 +49,12 @@ app.get('/', () => {console.log("hello world")});
 // save project to database
 app.post('/projects', async ({body,set}) => {
   try {
-    // Connect the client to the server
+    // Connect the client to the server and navigate to the projects database and projects collection
     await client.connect();
-    // navigate to the projects database and projects collection
     const database = client.db("projects").collection("projects");
     // insert the project into the database
     const result = await database.insertOne(body);
+
     // return the result
     set.status = 200;
     return result;
@@ -81,20 +82,21 @@ app.post('/projects', async ({body,set}) => {
 
 // Update a project details
 app.put('/project/:id', async({body,set, params:{id}}) => {
-
-  
-  //TODO: update project details inside mongodb database
   try {
-    // Connect the client to the server
-   await client.connect();
-    // navigate to the projects database and projects collection
+    // Connect the client to the server and navigate to the projects database and projects collection
+    await client.connect();
     const database = client.db("projects").collection("projects");
     //find and update the project
-    database.findOneAndUpdate({"_id": new ObjectId(id)},{$set:body});
+    const result = await database.findOneAndUpdate({"_id": new ObjectId(id)},{$set:body});
+    console.log(result);
+
+    // throw error if project not found
+    if (!result) throw new Error("project not found");
+
     // return the result
     set.status = 200;
     return "project updated";
-
+    
   } catch (error) {
     console.log(error);
     // return the error
@@ -102,13 +104,39 @@ app.put('/project/:id', async({body,set, params:{id}}) => {
     return error;
     
   }
-});
+}),{
+  // validate the request body that all data is present and have correct types
+  body:t.Object({
+    name: t.String(),
+    description: t.String(),
+    image: t.String(),
+  })
+};
 
 // Delete a project from database
-app.delete('/project/:id', () => {
+app.delete('/project/:id', async({params: {id}, set}) => {
   //TODO: delete project from mongodb database
+  try {
+    // Connect the client to the server and navigate to the projects database and projects collection
+    await client.connect();
+    const database = client.db("projects").collection("projects");
+    //find and delete the project
+    const result = await database.findOneAndDelete({"_id": new ObjectId(id)});
+
+    // throw error if project not found
+    if (!result) throw new Error("project not found");
+
+    // return the result
+    set.status = 200;
+    return "project deleted";
+
+  } catch (error) {
+    
+  }
 });
 
+
+//check if the server is running
 app.listen(3000, () => {
   console.log('App is listening on port 3000');
 });
