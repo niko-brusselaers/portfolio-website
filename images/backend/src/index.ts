@@ -23,24 +23,55 @@ app.get('/', () => {console.log("hello world")});
   console.log("get all projects");
   
    try {
+    // Connect the client to the server
     await client.connect();
+    // navigate to the projects database and projects collection
     const database = client.db("projects").collection("projects");
+    // Query the database for all projects
     const projects = await database.find({}).toArray();
+    // return the projects
     set.status = 200;
     return projects;
     
    } catch (error) {
+    // return the error
     set.status = 200;
     return error;
    }
    finally {
+    // close the connection to the database server
     await client.close();
    }
 });
 
 // save project to database
-app.post('/projects', () => {
-  //TODO: save project to mongodb database
+app.post('/projects', async ({body,set}) => {
+  try {
+    // Connect the client to the server
+    await client.connect();
+    // navigate to the projects database and projects collection
+    const database = client.db("projects").collection("projects");
+    // insert the project into the database
+    const result = await database.insertOne(body);
+    // return the result
+    set.status = 200;
+    return result;
+  } catch (error) {
+    // return the error
+    set.status = 200;
+    return error;
+  }
+  finally {
+    // close the connection to the database server
+    await client.close();
+  }
+  },{
+  // validate the request body that all data is present and have correct types
+  body:t.Object({
+    name: t.String(),
+    description: t.String(),
+    image: t.String(),
+  })
   
   
 });
