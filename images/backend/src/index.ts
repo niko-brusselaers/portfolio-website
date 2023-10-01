@@ -1,5 +1,5 @@
 import { Elysia,t } from "elysia";
-const { MongoClient } = require('mongodb');
+const { MongoClient, ObjectId } = require('mongodb');
 
 const app = new Elysia()
 
@@ -34,8 +34,9 @@ app.get('/', () => {console.log("hello world")});
     return projects;
     
    } catch (error) {
+    console.log(error);
     // return the error
-    set.status = 200;
+    set.status = 400;
     return error;
    }
    finally {
@@ -57,8 +58,9 @@ app.post('/projects', async ({body,set}) => {
     set.status = 200;
     return result;
   } catch (error) {
+    console.log(error);
     // return the error
-    set.status = 200;
+    set.status = 400;
     return error;
   }
   finally {
@@ -78,12 +80,32 @@ app.post('/projects', async ({body,set}) => {
 
 
 // Update a project details
-app.put('/projects/:name', () => {
+app.put('/project/:id', async({body,set, params:{id}}) => {
+
+  
   //TODO: update project details inside mongodb database
+  try {
+    // Connect the client to the server
+   await client.connect();
+    // navigate to the projects database and projects collection
+    const database = client.db("projects").collection("projects");
+    //find and update the project
+    database.findOneAndUpdate({"_id": new ObjectId(id)},{$set:body});
+    // return the result
+    set.status = 200;
+    return "project updated";
+
+  } catch (error) {
+    console.log(error);
+    // return the error
+    set.status = 400;
+    return error;
+    
+  }
 });
 
 // Delete a project from database
-app.delete('/projects/:name', () => {
+app.delete('/project/:id', () => {
   //TODO: delete project from mongodb database
 });
 
