@@ -1,0 +1,55 @@
+$primary-blue: #2ec4b6;
+$primary-purple: #04052e;
+$primary-yellow: #ffd500;
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+}
+
+.mainNav{
+    display: flex;
+    height: 100%;
+    width: calc(30vw - 5rem);
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mainNavLink{
+    display: flex;
+    width: 45%;
+    height: 100%;
+    border: 2px solid black;
+    color: black;
+    text-decoration: none;
+    font-size: 20pt;
+    font-weight: 600;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainNavLinkActive{
+    border: 4px solid black;
+}
+
+.navDesign{
+    display: flex;
+    height: 100%;
+    align-items: flex-start;
+    margin-left: 2rem;
+    width: calc(70vw - 5rem - 2rem);
+    justify-content: space-between;
+}
+
+.navLine{
+    width: 97%;
+    border: black 2px solid;
+}
+
+.navDot{
+    margin: -0.125% -0.125%;
+    border-radius: 50%;
+    border: black 5px solid;
+}
