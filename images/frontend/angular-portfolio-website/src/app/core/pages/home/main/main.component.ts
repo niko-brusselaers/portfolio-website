@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent {
-    introduction = "Greetings! I'm Niko Brusselaers"
-    content = "I'm a third-year student passionate about web development , striving to create immersive online experiences that blend creativity and functionality."
+    image = "https://picsum.photos/200/300"
+    content = "Hello World! I'm Niko function(ing) at my best creating web 'magic for you'. lets print() the future of the internet"
+    title = ["Niko","Brusselaers","Portfolio"]
 }
