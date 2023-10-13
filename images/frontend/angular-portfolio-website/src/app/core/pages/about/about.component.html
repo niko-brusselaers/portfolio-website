@@ -1,0 +1,29 @@
+<div class="aboutContainer">
+    <div class="aboutMeContainer">
+        <img src={{image}} alt={{image}}>
+        <p>
+            {{content}}
+        </p>
+    </div>
+
+    <div class="aboutSkillsContainer">
+        <div class="skills">
+            <h2>Hards Skills</h2>
+            <ul *ngFor="let hardSkill of hardSkills">
+                <li>{{hardSkill}}</li>
+            </ul>
+            <h2>Soft Skills</h2>
+            <ul *ngFor="let softSkill of softSkills">
+                <li>{{softSkill}}</li>
+            </ul>
+        </div>
+        <div class="links">
+            <a href="#">#</a>
+            <a href="#">#</a>
+            <a href="#">#</a>
+            <a href="#">#</a>
+            <a href="#">#</a>
+        </div>
+    </div>
+
+</div>

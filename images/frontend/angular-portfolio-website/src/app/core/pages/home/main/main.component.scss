@@ -7,12 +7,9 @@ $primary-blue: #0700C8;
     box-sizing: border-box;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
-    border-left: #04052e 2px solid;
-    border-right: #04052e 2px solid;
-    margin: 2vh 0;
-    padding: 7vw;
-    height: 70vh;
+    justify-content: space-between;
+    width: 100%;
+
 }
 
 .homepageCarousel{
@@ -32,6 +29,11 @@ $primary-blue: #0700C8;
     justify-content: space-between;
 }
 
+.homepageContent div .homePageTitle{
+    color: black;
+    text-align: end;
+}
+
 .homePageIntroduction{
     font-size: 15pt;
     font-weight: 600;
@@ -42,10 +44,9 @@ $primary-blue: #0700C8;
 .homePageTitle{
     font-size: 100pt;
     font-weight: 800;
-    text-align: end;
+    text-align: start;
 }
 
 .homepageContent .homePageTitle:last-of-type{
     color: $primary-blue;
-    text-align: start;
 }

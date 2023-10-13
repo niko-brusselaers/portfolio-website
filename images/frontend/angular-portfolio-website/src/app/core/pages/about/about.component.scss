@@ -1,0 +1,62 @@
+$primary-yellow: #EEFF00;
+$primary-blue: #0700C8;
+
+.aboutContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.aboutMeContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 40%;
+    height: 60vh;
+
+}
+
+.aboutMeContainer p{
+    font-size: 15pt;
+    font-weight: 600;
+    width: 80%;
+    
+}
+.aboutMeContainer img{
+    width: 20rem;
+    height: 20rem;
+    object-fit: fill;
+}
+
+.aboutSkillsContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 40%;
+}
+
+.aboutSkillsContainer h2{
+    font-size: 30pt;
+    font-weight: 800;
+    text-align: start;
+    color: $primary-blue;
+}
+
+.aboutSkillsContainer li{
+    font-size: 20pt;
+    font-weight: 600;
+    list-style: none;
+}
+
+.aboutSkillsContainer .skills{
+    width: 70%;
+}
+
+.aboutSkillsContainer .links{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 50vh;
+}
