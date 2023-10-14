@@ -147,3 +147,13 @@ i:hover{
     
     
 }
+
+@media screen and (min-aspect-ratio: 21/9){
+    .aboutMeContainer img{
+        width: 15vw;
+    }
+
+    .aboutMeContainer p{
+        font-size: 1vw;
+    }
+}
