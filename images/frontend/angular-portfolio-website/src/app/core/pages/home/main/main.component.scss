@@ -1,6 +1,5 @@
-$primary-yellow: #EEFF00;
-$primary-blue: #0700C8;
-
+@import "../../../styles/variables.scss";
+@import "../../../styles/font.scss";
 
 .homeContainer{
     display: flex;
@@ -13,13 +12,14 @@ $primary-blue: #0700C8;
 }
 
 .homepageCarousel{
-    width: 30rem;
-    height: 30rem;
+    box-sizing: border-box;
+    width: 30vw;
+    aspect-ratio: 1/1;
     object-fit: fill;
 }
 
 .homepageContent{
-    width: 50rem;
+    width: 50vw;
     padding-left: 10%;
 }
 
@@ -34,19 +34,35 @@ $primary-blue: #0700C8;
     text-align: end;
 }
 
-.homePageIntroduction{
-    font-size: 15pt;
-    font-weight: 600;
-    width: 60%;
-    
-}
 
-.homePageTitle{
-    font-size: 100pt;
-    font-weight: 800;
+.homepageContent h2{
     text-align: start;
 }
 
-.homepageContent .homePageTitle:last-of-type{
+.homepageContent h2:nth-child(3){
     color: $primary-blue;
+}
+
+@media screen and (max-width:1300px) {
+    .homeContainer{
+        flex-direction: column-reverse;
+    }
+
+    .homepageCarousel{
+        padding-top: 2rem;
+        width: 35vw;
+    }
+    
+}
+
+@media screen and (min-aspect-ratio: 21/9){
+    .homeContainer{
+        width: 80%;
+        padding-left: 20%;
+    }
+
+    .homepageCarousel{
+        width: 100rem;
+        height: 40rem;
+    }
 }

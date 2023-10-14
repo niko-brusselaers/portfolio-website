@@ -1,5 +1,5 @@
-$primary-yellow: #EEFF00;
-$primary-blue: #0700C8;
+@import "../../styles/variables.scss";
+@import "../../styles/font.scss";
 
 .aboutContainer{
     display: flex;
@@ -19,15 +19,16 @@ $primary-blue: #0700C8;
 }
 
 .aboutMeContainer p{
-    font-size: 15pt;
-    font-weight: 600;
-    width: 80%;
+    font-size: 1.5vw;
+    width: 100%;
     
 }
 .aboutMeContainer img{
-    width: 20rem;
-    height: 20rem;
+    box-sizing: border-box;
+    width: 20vw;
+    aspect-ratio: 1/1;
     object-fit: fill;
+    padding-bottom: 2em;
 }
 
 .aboutSkillsContainer{
@@ -38,19 +39,17 @@ $primary-blue: #0700C8;
 }
 
 .aboutSkillsContainer h2{
-    font-size: 30pt;
-    font-weight: 800;
+    font-size: 2vw;
     text-align: start;
     color: $primary-blue;
 }
 
 .aboutSkillsContainer li{
-    font-size: 20pt;
-    font-weight: 600;
     list-style: none;
+    font-size: 1vw;
 }
 
-.aboutSkillsContainer .skills{
+.skills{
     width: 70%;
 }
 
@@ -59,4 +58,92 @@ $primary-blue: #0700C8;
     flex-direction: column;
     justify-content: space-evenly;
     height: 50vh;
+}
+
+i{
+    width: 3vw;
+}
+
+i:hover{
+    color: $primary-blue;
+     fill: red !important;
+}
+
+.icon-linkedin{
+    content: url("../../../../assets/icons/linkedin_icon.svg");
+
+}
+
+.icon-github{
+    content: url("../../../../assets/icons/github_icon.svg");
+}
+
+.icon-cv{
+    content: url("../../../../assets/icons/cv_icon.svg");
+}
+
+.icon-mail{
+    content: url("../../../../assets/icons/mail_icon.svg");
+}
+
+.icon-phone{
+    content: url("../../../../assets/icons/phone_icon.svg");
+}
+
+@media screen and (max-width:1300px) {
+    .aboutContainer{
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .aboutMeContainer{
+        width: 80%;
+        height: 40vh;
+    }
+
+    .aboutMeContainer img{
+        box-sizing: border-box;
+        width: 40vw;
+        padding: 0;
+    }
+
+    .aboutMeContainer p{
+        padding: 3em 0;
+    }
+
+
+
+    .aboutSkillsContainer{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: normal;
+        width: 80vw;
+        padding-top: 2em;
+    }
+
+    .skills{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        width: 100%;
+    }
+
+
+    .aboutSkillsContainer{
+        height: 20vh;
+    }
+
+
+    div.links{
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        flex-direction: row !important;
+        justify-content: space-evenly !important;
+        width: 100%;
+        padding: 0;
+        height: 10vh !important;
+    }
+    
+    
 }
