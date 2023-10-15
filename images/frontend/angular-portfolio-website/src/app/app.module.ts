@@ -7,6 +7,7 @@ import { HeaderComponent } from './core/shared/components/header/header.componen
 import { MainComponent } from './core/pages/home/main/main.component';
 import { SecondaryNavComponent } from './core/shared/components/secondary-nav/secondary-nav.component';
 import { AboutComponent } from './core/pages/about/about.component';
+import { ProjectComponent } from './core/pages/project/project.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { AboutComponent } from './core/pages/about/about.component';
     HeaderComponent,
     MainComponent,
     SecondaryNavComponent,
-    AboutComponent
+    AboutComponent,
+    ProjectComponent
   ],
   imports: [
     BrowserModule,
