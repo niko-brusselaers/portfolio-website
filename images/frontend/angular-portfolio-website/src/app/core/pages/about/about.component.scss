@@ -1,5 +1,6 @@
 @import "../../styles/variables.scss";
 @import "../../styles/font.scss";
+@import "../../styles/icons.scss";
 
 .aboutContainer{
     display: flex;
@@ -44,14 +45,45 @@
     color: $primary-blue;
 }
 
-.aboutSkillsContainer li{
-    list-style: none;
-    font-size: 1vw;
+.skills{
+    width: 80%;
+
+    .hardSkillContainer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    
+        div{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            background-color: $primary-blue;
+            padding: .25em .75em .25em .25em;
+            margin: .25em .5em .25em 0em;
+            span{
+            color: white;
+            }
+            
+            i{
+                margin: 0 .5em ;
+            }
+        }
+    
+    }
+
+    .softSkillContainer{
+        display:  flex;
+        flex-wrap: wrap;
+        span{
+            padding: .25em .75em .25em .25em;
+            margin: .25em .5em .25em 0em;
+            background-color: $primary-blue;
+            color: white;
+        }
+    }
 }
 
-.skills{
-    width: 70%;
-}
+
 
 .aboutSkillsContainer .links{
     display: flex;
@@ -66,29 +98,8 @@ i{
 
 i:hover{
     color: $primary-blue;
-     fill: red !important;
 }
 
-.icon-linkedin{
-    content: url("../../../../assets/icons/linkedin_icon.svg");
-
-}
-
-.icon-github{
-    content: url("../../../../assets/icons/github_icon.svg");
-}
-
-.icon-cv{
-    content: url("../../../../assets/icons/cv_icon.svg");
-}
-
-.icon-mail{
-    content: url("../../../../assets/icons/mail_icon.svg");
-}
-
-.icon-phone{
-    content: url("../../../../assets/icons/phone_icon.svg");
-}
 
 @media screen and (max-width:1300px) {
     .aboutContainer{

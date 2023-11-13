@@ -5,20 +5,23 @@
             {{content}}
         </p>
     </div>
-
+    
     <div class="aboutSkillsContainer">
         <div class="skills">
             <div>
                 <h2 class="title">Hards Skills</h2>
-                <ul *ngFor="let hardSkill of hardSkills">
-                    <li class="textRegular">{{hardSkill}}</li>
-                </ul>
+                <div class="hardSkillContainer" >
+                    <div *ngFor="let hardSkill of hardSkills" class="textRegular">
+                        <i [class]="'icon-' + hardSkill.iconClassName+' icon'"></i>
+                        <span >{{hardSkill.name}}</span>
+                    </div>
+                </div>
             </div>
             <div>
                 <h2 class="title">Soft Skills</h2>
-                <ul *ngFor="let softSkill of softSkills">
-                    <li class="textRegular">{{softSkill}}</li>
-                </ul>
+                <div class="softSkillContainer">
+                    <span *ngFor="let softSkill of softSkills" class="textRegular">{{softSkill}}</span>
+                </div>
             </div>
         </div>
         <div class="links">
