@@ -1,2 +1,18 @@
-<div class="projectcontainer">
+<div class="projectContainer">
+    <div class="projectDetailsContainer">
+        <h1 class="title">{{project.name}} </h1>
+        <div class="detailsContainer2">
+            <div class="projectlinkContainer">
+                <div *ngIf="project.link"><a href={{project.link.toString()}} class="textSemiBold">check out here </a><i class="icon-hyperlink icon"></i></div>
+                <div><a *ngFor="let link of project.githubLink" href={{link.toString()}} class="textSemiBold" >github repository </a><i class="icon-hyperlink icon"></i></div>
+            </div>
+            <div class="projectDescriptionContainer">
+                <div class="technologiesContainer">
+                    <div *ngFor="let technology of project.technologies"><i [class]="'icon-' + technology+' icon'"></i><span class="textRegular">{{technology}}</span></div>
+                </div>
+                <p class="textRegular">{{project.description}}</p>
+            </div>
+        </div>
+    </div>
+    <img class="projectImage" src={{project.image}} alt={{project.image}}>
 </div>

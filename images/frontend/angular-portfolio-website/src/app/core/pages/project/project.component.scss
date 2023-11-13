@@ -1,10 +1,83 @@
 @import "../../styles/variables.scss";
 @import "../../styles/font.scss";
+@import "../../styles/icons.scss";
 
 .projectContainer{
+    height: 65vh;
+    padding: 3vh 5vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.projectDetailsContainer{
+    height: 100%;
+    width: 50%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+
+}
+
+.detailsContainer2{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+
+.projectlinkContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
     justify-content: space-evenly;
-    height: 100%;
+    height: 80%;
+
+    div{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        a{
+        text-decoration: none;
+        padding-right: .25em;
+        }
+    }
+}
+
+.projectDescriptionContainer{
+    width: 60%;
+    p{
+        width: 100%;
+
+    }
+}
+
+.technologiesContainer{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2em 0;
+
+    div{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: .5em 1em .25em 0;
+        padding: 0.5em;
+        background-color: $primary-blue;
+
+        span{
+            text-align: center;
+            color: white;
+            padding-left: .5em;
+        }
+    }
+
+}
+
+.projectImage{
+    width: 45%;
 }
