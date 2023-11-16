@@ -3,6 +3,6 @@ export interface IProject {
     description: string;
     image: string;
     url: string;
-    githubLink: string;
+    githubLink: string[];
     technologies: string[];
 }

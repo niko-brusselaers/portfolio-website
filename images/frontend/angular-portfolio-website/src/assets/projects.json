@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Portfolio Website",
+    "description": "This is my portfolio website created using HTML, CSS, and JavaScript. It's responsive and utilizes Bootstrap for design.",
+    "image": "https://example.com/portfolio1.png",
+    "url": "https://niko-brusselaers.com",
+    "githubLink": "https://github.com/niko/portfolio"
+  },
+  {
+    "name": "Task Management App",
+    "description": "A task management application built with React and Redux. Users can create, edit, and delete tasks, and the app stores data in the cloud.",
+    "image": "https://example.com/task-app.png",
+    "url": "https://task-app.com",
+    "githubLink": "https://github.com/niko/task-app"
+  },
+  {
+    "name": "E-commerce Platform",
+    "description": "An e-commerce platform developed using Django and React. It supports product listings, user accounts, and secure payment processing.",
+    "image": "https://example.com/ecommerce-platform.png",
+    "url": "https://shop-now.com",
+    "githubLink": "https://github.com/niko/ecommerce-platform"
+  },
+  {
+    "name": "Blog Website",
+    "description": "A blog website built with Node.js and Express. Users can create, edit, and delete blog posts, and the website includes user authentication.",
+    "image": "https://example.com/blog-website.png",
+    "url": "https://my-blog.com",
+    "githubLink": "https://github.com/niko/blog-website"
+  },
+  {
+    "name": "Weather App",
+    "description": "A weather application created with Vue.js. Users can check the current weather conditions and forecasts for different locations.",
+    "image": "https://example.com/weather-app.png",
+    "url": "https://weather-now.com",
+    "githubLink": "https://github.com/niko/weather-app"
+  },
+  {
+    "name": "Recipe Book",
+    "description": "A recipe book web application built with Angular. Users can browse and save recipes, and the app includes features for meal planning.",
+    "image": "https://example.com/recipe-book.png",
+    "url": "https://recipe-book.com",
+    "githubLink": "https://github.com/niko/recipe-book"
+  },
+  {
+    "name": "Weather App",
+    "description": "A weather application created with Vue.js. Users can check the current weather conditions and forecasts for different locations.",
+    "image": "https://example.com/weather-app.png",
+    "url": "https://weather-now.com",
+    "githubLink": "https://github.com/niko/weather-app"
+  },
+  {
+    "name": "Recipe Book",
+    "description": "A recipe book web application built with Angular. Users can browse and save recipes, and the app includes features for meal planning.",
+    "image": "https://example.com/recipe-book.png",
+    "url": "https://recipe-book.com",
+    "githubLink": "https://github.com/niko/recipe-book"
+  }
+]
