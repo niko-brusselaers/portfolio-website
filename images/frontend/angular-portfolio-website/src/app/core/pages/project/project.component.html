@@ -4,7 +4,7 @@
             <div class="detailsContainer2">
                 <div class="projectlinkContainer">
                     <div *ngIf="project.url"><a [href]="'http://' + project.url"class="textSemiBold" target="_blank">Check out here</a><i class="icon-hyperlink icon"></i></div>
-                    <div><a *ngFor="let link of project.githubLink" [href]="'http://' + link" class="textSemiBold" target="_blank">github repository </a><i class="icon-hyperlink icon"></i></div>
+                    <div *ngFor="let link of project.githubLink"><a  [href]="'http://' + link" class="textSemiBold" target="_blank">github repository </a><i class="icon-hyperlink icon"></i></div>
                 </div>
                 <div class="projectDescriptionContainer">
                     <div class="technologiesContainer">
