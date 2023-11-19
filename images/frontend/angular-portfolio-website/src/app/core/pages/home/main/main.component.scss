@@ -1,5 +1,8 @@
 @import "../../../styles/variables.scss";
 @import "../../../styles/font.scss";
+@import "../../../styles/icons.scss";
+@import "@coreui/coreui/scss/coreui";
+
 
 .homeContainer{
     display: flex;
@@ -14,7 +17,8 @@
 .homepageCarousel{
     box-sizing: border-box;
     width: 30vw;
-    aspect-ratio: 1/1;
+    aspect-ratio: 3/2;
+
     object-fit: fill;
 }
 
@@ -50,19 +54,7 @@
 
     .homepageCarousel{
         padding-top: 2rem;
-        width: 35vw;
+        width: 20vw;
     }
     
-}
-
-@media screen and (min-aspect-ratio: 21/9){
-    .homeContainer{
-        width: 80%;
-        padding-left: 20%;
-    }
-
-    .homepageCarousel{
-        width: 100rem;
-        height: 40rem;
-    }
 }

@@ -14,7 +14,7 @@ export class ProjectComponent {
       name: "",
       description: "",
       technologies: [""],
-      image: "",
+      image: [""],
       url: "",
       githubLink: [""]
     }

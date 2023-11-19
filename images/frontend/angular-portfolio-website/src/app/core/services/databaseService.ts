@@ -28,6 +28,22 @@ class DatabaseService{
         //return project details
         return projectDetails;
     }
+
+    async getProjectImages(projectName:string | undefined): Promise<string[]>{
+        //get all projects 
+        const response = await this.getData();        
+        //convert to json
+        const data: IProject[] = await response.json();        
+        //if project name is undefined return array of all primary images
+        if(projectName === undefined){
+            const projectImages: string[] = data.map((element: IProject) => element.image[0]);
+            return projectImages;
+        } else{
+        //get project images
+            const projectImages: string[] = data.find((element: IProject) => element.name === projectName)!.image;
+            return projectImages;
+        }
+    }
 }
 
 export const databaseService = new DatabaseService()

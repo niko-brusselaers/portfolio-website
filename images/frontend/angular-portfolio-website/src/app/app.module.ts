@@ -8,6 +8,8 @@ import { MainComponent } from './core/pages/home/main/main.component';
 import { SecondaryNavComponent } from './core/shared/components/secondary-nav/secondary-nav.component';
 import { AboutComponent } from './core/pages/about/about.component';
 import { ProjectComponent } from './core/pages/project/project.component';
+import { CarouselModule } from '@coreui/angular';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,10 @@ import { ProjectComponent } from './core/pages/project/project.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CarouselModule,
+    BrowserAnimationsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

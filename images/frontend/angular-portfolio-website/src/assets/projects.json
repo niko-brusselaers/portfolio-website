@@ -2,7 +2,7 @@
   {
     "name": "Wikiwall",
     "description": "Welcome to our 3.0 knowledge-sharing platform, a focused evolution of the Wikipedia model. With React and TypeScript at its core, our interface is streamlined for efficiency, ensuring a seamless user experience. Framer Motion adds dynamic animations, creating a visually engaging atmosphere. Collaborative content creation is enhanced with efficient editing tools, making this version a leaner and more responsive upgrade. Welcome to the future of knowledge sharing, where technology meets simplicity. ",
-    "image": "https://placehold.co/600x400",
+    "image": ["https://placehold.co/600x400"],
     "url": ["wikiwall-niko-brusselaers.onrender.com/"],
     "githubLink": ["github.com/niko-brusselaers/web-2-frontend-22-23-niko-brusselaers"],
     "technologies": ["React", "TypeScript", "CSS3", "Framer-motion", "react-router", "NodeJs"]
@@ -11,7 +11,7 @@
   {
     "name": "Game select",
     "description": "Welcome to our minimalist game selection platform, meticulously crafted with functionality in mind. When the paradox of choice overwhelms your gaming decisions, our website steps in with a straightforward solution. Simply access a randomly selected game from your library with a single click, or embrace the uncertainty by letting our system pick a game for you. Designed for the discerning gamer, our platform extends beyond chance. Tailor your experience by inputting your preferences, allowing our algorithm to curate a game recommendation personalized to your unique tastes. Whether you're a code-savvy veteran or a casual enthusiast, our no-frills interface streamlines the game-selection process, freeing you from decision fatigue and emphasizing a utilitarian approach to gaming.",
-    "image": "https://placehold.co/600x400",
+    "image": ["https://placehold.co/600x400"],
     "url": ["niko-brusselaers.github.io/web-2-frontend-22-23-niko-brusselaers/"],
     "githubLink": ["github.com/niko-brusselaers/web-2-frontend-22-23-niko-brusselaers", "github.com/niko-brusselaers/web-2-backend-22-23-niko-brusselaers"],
     "technologies": ["MongoDB", "NodeJs", "JavaScript", "HTML5", "CSS3"]
@@ -20,7 +20,7 @@
   {
     "name": "WebRTC Prototype",
     "description": "Introducing our video chat prototype, where PeerJS, Docker, TypeScript, and React converge for a cutting-edge experience. PeerJS enables secure peer-to-peer connections, Docker streamlines deployment, TypeScript adds reliability, and React ensures a dynamic user interface. This isn't just a prototype; it's a tech-driven evolution of video communication. Welcome to the future of efficient, secure, and engaging video chats.",
-    "image": "https://placehold.co/600x400",
+    "image": ["https://placehold.co/600x400"],
     "url": ["https://videochatapp.niko-brusselaers.com/"],
     "githubLink": ["github.com/niko-brusselaers/WebRTC-prototype"],
     "technologies": ["React", "TypeScript", "Docker", "NodeJs","Express","CSS3"]
@@ -28,7 +28,7 @@
   {
     "name": "medialab loan tool",
     "description": "Our application, designed as an inventory and loan tracking tool for the medialab, relies on Laravel for a secure and scalable solution. This PHP framework ensures efficient organization and retrieval of item information. With a user-friendly interface, the application simplifies the process of managing inventory and tracking loans. This is not just an app; it's a purposeful integration of technology, with Laravel providing a reliable foundation for streamlined inventory management in the medialab.",
-    "image": "https://placehold.co/600x400",
+    "image": ["https://placehold.co/600x400"],
     "githubLink": ["github.com/niko-brusselaers/back-end-course-project-niko-brusselaers/tree/main/medialab_loan_application"],
     "technologies": ["MongoDB","Laravel","PHP", "NoSQL","Docker",  "HTML5", "TailwindCSS"]
   }
