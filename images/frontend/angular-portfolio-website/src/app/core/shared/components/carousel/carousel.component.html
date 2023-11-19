@@ -1,0 +1,13 @@
+<c-carousel *ngIf="images && images.length > 0" [interval]="6000" class="carousel" [touch]="true" [animate]="true" >
+        <c-carousel-inner >
+            <c-carousel-item *ngFor="let image of images">
+                <img
+                    [src]="image"
+                    class="homepageCarousel d-block"
+                    loading="lazy"
+                />
+            </c-carousel-item>
+        </c-carousel-inner>
+        <c-carousel-control [routerLink]  direction="prev"><i [class]="'icon-previous'"></i></c-carousel-control>
+        <c-carousel-control [routerLink] direction="next"><i [class]="'icon-next'"></i></c-carousel-control>
+</c-carousel>

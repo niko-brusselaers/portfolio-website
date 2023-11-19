@@ -1,7 +1,5 @@
 @import "../../../styles/variables.scss";
 @import "../../../styles/font.scss";
-@import "../../../styles/icons.scss";
-@import "@coreui/coreui/scss/coreui";
 
 
 .homeContainer{
@@ -14,12 +12,10 @@
 
 }
 
-.homepageCarousel{
+.carousel{
     box-sizing: border-box;
     width: 30vw;
-    aspect-ratio: 3/2;
-
-    object-fit: fill;
+    height: 50vh;
 }
 
 .homepageContent{
@@ -52,9 +48,10 @@
         flex-direction: column-reverse;
     }
 
-    .homepageCarousel{
+    .carousel{
         padding-top: 2rem;
         width: 20vw;
+        height: 40vh;
     }
     
 }

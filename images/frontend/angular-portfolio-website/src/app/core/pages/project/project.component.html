@@ -14,5 +14,6 @@
                 </div>
             </div>
         </div>
-        <img class="projectImage" src={{project.image}} alt={{project.image}}>
+        <app-carousel *ngIf="project.name" class="carousel" [projectName]="project.name"></app-carousel>
+        <!-- <img class="projectImage" src={{project.image}} alt={{project.image}}> -->
     </div>

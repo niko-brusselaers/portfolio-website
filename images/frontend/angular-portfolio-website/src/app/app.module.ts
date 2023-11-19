@@ -10,6 +10,7 @@ import { AboutComponent } from './core/pages/about/about.component';
 import { ProjectComponent } from './core/pages/project/project.component';
 import { CarouselModule } from '@coreui/angular';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CarouselComponent } from './core/shared/components/carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MainComponent,
     SecondaryNavComponent,
     AboutComponent,
-    ProjectComponent
+    ProjectComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,

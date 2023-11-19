@@ -29,8 +29,10 @@ class DatabaseService{
         return projectDetails;
     }
 
-    async getProjectImages(projectName:string | undefined): Promise<string[]>{
+    async getProjectImages(projectName:string | undefined = "WebRTC Prototype"): Promise<string[]>{
         //get all projects 
+        if(projectName === "") console.log("test");
+               
         const response = await this.getData();        
         //convert to json
         const data: IProject[] = await response.json();        

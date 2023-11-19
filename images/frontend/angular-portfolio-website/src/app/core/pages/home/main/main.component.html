@@ -1,19 +1,5 @@
 <div class="homeContainer">
-    <!-- <img src={{image}} alt="" class="homepageCarousel"> -->
-    <c-carousel [interval]="6000" style="padding: 0; margin: 0;" [animate]="false" >
-        <c-carousel-inner>
-            <c-carousel-item *ngFor="let image of images">
-                <img
-                    [src]="image.src"
-                    alt="{{image.title}}"
-                    class="homepageCarousel d-block"
-                    loading="lazy"
-                />
-            </c-carousel-item>
-        </c-carousel-inner>
-        <c-carousel-control [routerLink]  direction="prev"><i [class]="'icon-previous'"></i></c-carousel-control>
-        <c-carousel-control [routerLink] direction="next"><i [class]="'icon-next'"></i></c-carousel-control>
-    </c-carousel>
+        <app-carousel  class="carousel" [projectName]="undefined"></app-carousel>
     <div class="homepageContent">
         <div>
         <p class="homePageIntroduction textSemiBold">
