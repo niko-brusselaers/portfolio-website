@@ -10,7 +10,7 @@
   },
   {
     "name": "Game select",
-    "description": "Welcome to our minimalist game selection platform, meticulously crafted with functionality in mind. When the paradox of choice overwhelms your gaming decisions, our website steps in with a straightforward solution. Simply access a randomly selected game from your library with a single click, or embrace the uncertainty by letting our system pick a game for you. Designed for the discerning gamer, our platform extends beyond chance. Tailor your experience by inputting your preferences, allowing our algorithm to curate a game recommendation personalized to your unique tastes. Whether you're a code-savvy veteran or a casual enthusiast, our no-frills interface streamlines the game-selection process, freeing you from decision fatigue and emphasizing a utilitarian approach to gaming.",
+    "description": "Welcome to our streamlined game selection platform, built for functionality. Overwhelmed by choices? Click for a random game from your library or let our system choose for you. Tailor your experience by inputting preferences. Whether you're a seasoned gamer or casual player, our no-frills interface makes game selection easy, eliminating decision fatigue.",
     "image": ["https://placehold.co/600x400", "https://placehold.co/600x450","https://placehold.co/700x400"],
     "url": ["niko-brusselaers.github.io/web-2-frontend-22-23-niko-brusselaers/"],
     "githubLink": ["github.com/niko-brusselaers/web-2-frontend-22-23-niko-brusselaers", "github.com/niko-brusselaers/web-2-backend-22-23-niko-brusselaers"],
