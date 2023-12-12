@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent {
-  image = "https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png"
+  image = "./assets/images/profile_image.png"
   content = "Hello, I'm Niko, a third-year student in Multimedia and Creative Technologies at EHB Brussels. I'm on a journey to become a full-stack developer, where I merge creativity and technology."
   hardSkills = [
   "HTML5",
