@@ -29,7 +29,7 @@ class DatabaseService{
         return projectDetails;
     }
 
-    async getProjectImages(projectName:string | undefined = "WebRTC Prototype"): Promise<string[]>{
+    async getProjectImages(projectName:string | undefined): Promise<string[]>{
         //get all projects 
         if(projectName === "") console.log("test");
                
