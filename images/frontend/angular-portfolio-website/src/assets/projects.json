@@ -2,7 +2,7 @@
   {
     "name": "Wikiwall",
     "description": "Welcome to our 3.0 knowledge-sharing platform, a focused evolution of the Wikipedia model. With React and TypeScript at its core, our interface is streamlined for efficiency, ensuring a seamless user experience. Framer Motion adds dynamic animations, creating a visually engaging atmosphere. Collaborative content creation is enhanced with efficient editing tools, making this version a leaner and more responsive upgrade. Welcome to the future of knowledge sharing, where technology meets simplicity. ",
-    "image": ["https://placehold.co/600x450"],
+    "image": ["./assets/images/projectImages/Wikiwall/image1.png","./assets/images/projectImages/Wikiwall/image2.png","./assets/images/projectImages/Wikiwall/image3.png","./assets/images/projectImages/Wikiwall/image4.png","./assets/images/projectImages/Wikiwall/image5.png"],
     "url": ["wikiwall-niko-brusselaers.onrender.com/"],
     "githubLink": ["github.com/niko-brusselaers/web-2-frontend-22-23-niko-brusselaers"],
     "technologies": ["React", "TypeScript", "CSS3", "Framer-motion", "react-router", "NodeJs"]
@@ -11,7 +11,7 @@
   {
     "name": "Game select",
     "description": "Welcome to our streamlined game selection platform, built for functionality. Overwhelmed by choices? Click for a random game from your library or let our system choose for you. Tailor your experience by inputting preferences. Whether you're a seasoned gamer or casual player, our no-frills interface makes game selection easy, eliminating decision fatigue.",
-    "image": ["https://placehold.co/600x400", "https://placehold.co/600x450","https://placehold.co/700x400"],
+    "image": ["./assets/images/projectImages/gameSelect/image1.png", "./assets/images/projectImages/gameSelect/image2.png", "./assets/images/projectImages/gameSelect/image3.png", "./assets/images/projectImages/gameSelect/image4.png"],
     "url": ["niko-brusselaers.github.io/web-2-frontend-22-23-niko-brusselaers/"],
     "githubLink": ["github.com/niko-brusselaers/web-2-frontend-22-23-niko-brusselaers", "github.com/niko-brusselaers/web-2-backend-22-23-niko-brusselaers"],
     "technologies": ["MongoDB", "NodeJs", "JavaScript", "HTML5", "CSS3"]
