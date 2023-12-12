@@ -1,4 +1,4 @@
-import { Component,Input } from '@angular/core';
+import { Component,Input, OnChanges } from '@angular/core';
 import { databaseService } from 'src/app/core/services/databaseService';
 
 @Component({
@@ -11,6 +11,12 @@ export class CarouselComponent {
   @Input() width = "100%";
   @Input() height = "100%";
   selectImage = 0;
+
+  ngOnChanges(): void {
+    if(this.images.length > 0){
+      this.selectImage = 0;
+    }
+  }
 
   selectNextImage():void{
     if(this.selectImage < this.images.length-1) this.selectImage++
@@ -26,4 +32,6 @@ export class CarouselComponent {
   getCurrentImage():string{
     return `url(${this.images[this.selectImage]})`
   } 
+
+  
 }
