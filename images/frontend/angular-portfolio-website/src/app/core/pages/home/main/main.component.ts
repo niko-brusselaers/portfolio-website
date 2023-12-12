@@ -10,9 +10,12 @@ export class MainComponent {
     content = "Hello World! I'm Niko function(ing) at my best creating web 'magic for you'. lets print() the future of the internet"
     title = ["Niko","Brusselaers","Portfolio"]
 
-   
-
-  onItemChange($event: any): void {
-    console.log('Carousel onItemChange', $event);
-  }
+    
+    images:string[] = []
+    
+    ngOnInit(): void {
+      databaseService.getProjectImages(undefined)
+      .then((data)=> this.images = data)
+    }
+  
 }

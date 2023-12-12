@@ -18,7 +18,6 @@ export class ProjectComponent {
       url: "",
       githubLink: [""]
     }
-
     constructor(private route: ActivatedRoute, private cdr: ChangeDetectorRef) {
 
       

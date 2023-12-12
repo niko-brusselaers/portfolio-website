@@ -7,16 +7,23 @@ import { databaseService } from 'src/app/core/services/databaseService';
   styleUrls: ['./carousel.component.scss']
 })
 export class CarouselComponent {
-  @Input() projectName: string | undefined 
+  @Input() images: string[] = [];
+  @Input() width = "100%";
+  @Input() height = "100%";
+  selectImage = 0;
 
-  images: string[] = [];
-
-  ngOnInit(): void {
-    databaseService.getProjectImages(this.projectName)
-    .then((images) => {
-      images.forEach((image, index) => {
-        this.images[index] = image;
-      })
-    })
+  selectNextImage():void{
+    if(this.selectImage < this.images.length-1) this.selectImage++
+    else this.selectImage = 0
   }
+
+  selectPreviousImage():void{
+    if(this.selectImage > 0) this.selectImage--
+    else this.selectImage = this.images.length-1
+  }
+
+
+  getCurrentImage():string{
+    return `url(${this.images[this.selectImage]})`
+  } 
 }
