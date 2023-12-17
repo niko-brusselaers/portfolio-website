@@ -1,4 +1,5 @@
 <div class="carouselContainer" [ngStyle]="{'background-image': getCurrentImage(), 'width': width, 'height': height}">
-    <div class="icon-previous" (click)="selectPreviousImage()"></div>
-    <div class="icon-next" (click)="selectNextImage()"></div>
+    
+    <div *ngIf="singleImage === false" class="icon-previous" (click)="selectPreviousImage()"></div>
+    <div *ngIf="singleImage === false" class="icon-next" (click)="selectNextImage()"></div>
 </div>
