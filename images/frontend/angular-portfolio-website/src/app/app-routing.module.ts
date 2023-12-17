@@ -5,9 +5,9 @@ import { AboutComponent } from './core/pages/about/about.component';
 import { ProjectComponent } from './core/pages/project/project.component';
 
 const routes: Routes = [
-  {path: "", component: MainComponent},
-  {path: "about", component: AboutComponent},
-  {path: "project/:projectName", component: ProjectComponent}
+  {path: "", component: MainComponent, data: {animation: "isLeft"}},
+  {path: "about", component: AboutComponent, data: {animation: "isRight"}},
+  {path: "project/:projectName", component: ProjectComponent, data: {animation: "isRight"}}
 ];
 
 @NgModule({
