@@ -19,7 +19,7 @@
 }
 
 .secondaryNavLink{
-        display: flex;
+    display: flex;
     align-items: center;
     text-decoration: none;
     box-sizing: border-box;
@@ -28,8 +28,11 @@
     color: black;
     text-align: center;
     font-weight: 800;
-    font-size: 20pt;
+    font-size: 1.25vw;
     justify-content: center;
+    border-left: 1px solid #F9F4F3;
+    border-right: 1px solid #F9F4F3;
+
 }
 
 .secondaryNavLink:hover{
