@@ -48,7 +48,7 @@
   {
     "name": "medialab loan tool",
     "description": "Our application, designed as an inventory and loan tracking tool for the medialab, relies on Laravel for a secure and scalable solution. This PHP framework ensures efficient organization and retrieval of item information. With a user-friendly interface, the application simplifies the process of managing inventory and tracking loans. This is not just an app; it's a purposeful integration of technology, with Laravel providing a reliable foundation for streamlined inventory management in the medialab.",
-    "image": ["https://placehold.co/700x400"],
+    "image": ["./assets/images/projectImages/medialabLoanTool/image1.png","./assets/images/projectImages/medialabLoanTool/image2.png","./assets/images/projectImages/medialabLoanTool/image3.png","./assets/images/projectImages/medialabLoanTool/image4.png","./assets/images/projectImages/medialabLoanTool/image5.png"],
     "githubLink": ["github.com/niko-brusselaers/back-end-course-project-niko-brusselaers/tree/main/medialab_loan_application"],
     "technologies": ["MongoDB","Laravel","PHP", "NoSQL","Docker",  "HTML5", "TailwindCSS"]
   }
