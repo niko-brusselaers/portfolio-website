@@ -4,7 +4,7 @@
     "description": "Welcome to our 3.0 knowledge-sharing platform, a focused evolution of the Wikipedia model. With React and TypeScript at its core, our interface is streamlined for efficiency, ensuring a seamless user experience. Framer Motion adds dynamic animations, creating a visually engaging atmosphere. Collaborative content creation is enhanced with efficient editing tools, making this version a leaner and more responsive upgrade. Welcome to the future of knowledge sharing, where technology meets simplicity. ",
     "image": ["./assets/images/projectImages/Wikiwall/image1.png","./assets/images/projectImages/Wikiwall/image2.png","./assets/images/projectImages/Wikiwall/image3.png","./assets/images/projectImages/Wikiwall/image4.png","./assets/images/projectImages/Wikiwall/image5.png"],
     "url": ["wikiwall-niko-brusselaers.onrender.com/"],
-    "githubLink": ["github.com/niko-brusselaers/web-2-frontend-22-23-niko-brusselaers"],
+    "githubLink": ["github.com/niko-brusselaers/frontend-werkstuk-22-23-niko-brusselaers"],
     "technologies": ["React", "TypeScript", "CSS3", "Framer-motion", "react-router", "NodeJs"]
     
   },
@@ -20,10 +20,30 @@
   {
     "name": "WebRTC Prototype",
     "description": "Introducing our video chat prototype, where PeerJS, Docker, TypeScript, and React converge for a cutting-edge experience. PeerJS enables secure peer-to-peer connections, Docker streamlines deployment, TypeScript adds reliability, and React ensures a dynamic user interface. This isn't just a prototype; it's a tech-driven evolution of video communication. Welcome to the future of efficient, secure, and engaging video chats.",
-    "image": ["https://placehold.co/600x480"],
+    "image": ["./assets/images/projectImages/videoChatApp/image1.png"],
     "url": ["https://videochatapp.niko-brusselaers.com/"],
     "githubLink": ["github.com/niko-brusselaers/WebRTC-prototype"],
-    "technologies": ["React", "TypeScript", "Docker", "NodeJs","Express","CSS3"]
+    "technologies": ["React", "Typescript", "Docker", "NodeJs","Express","CSS3"]
+  },{
+    "name": "Live Chat application",
+    "description": "The Live Chat App, built with TypeScript and React, enables real-time communication through WebSockets. Prioritizing privacy, the app automatically deletes user data, including messages and details, upon session end or user departure. TypeScript ensures code integrity, while React provides a dynamic user interface. The platform integrates end-to-end encryption for secure conversations, enhancing user privacy. Lightweight and efficient, the Live Chat App in TypeScript and React offers a secure and responsive solution for immediate online conversations.",
+    "image": ["./assets/images/projectImages/liveChatApplication/image1.png","./assets/images/projectImages/liveChatApplication/image2.png","./assets/images/projectImages/liveChatApplication/image3.png"],
+    "githubLink": ["github.com/niko-brusselaers/live-chat-application"],
+    "technologies": ["React", "Typescript", "NodeJs","Express","CSS3", "Socket-io"]
+  },
+  {
+    "name": "File transfer prototype",
+    "description": "The File Transfer App, constructed with React, TypeScript, Express, and WebSockets, facilitates file sharing through server-based storage or direct peer-to-peer transfers. With a focus on efficiency, React and TypeScript provide a reliable front-end, while Express manages server-side file handling. Users can opt for centralized file storage or seamless device-to-device transfers, ensuring technical flexibility in the file-sharing process.",
+    "image": ["./assets/images/projectImages/fileTransferApp/image1.png","./assets/images/projectImages/fileTransferApp/image2.png","./assets/images/projectImages/fileTransferApp/image3.png","./assets/images/projectImages/fileTransferApp/image4.png","./assets/images/projectImages/fileTransferApp/image5.png"],
+    "githubLink": ["github.com/niko-brusselaers/File-transfer-app-prototype"],
+    "technologies": ["JavaScript","React", "Typescript", "NodeJs","Express","CSS3", "Socket-io", "MongoDB"]
+  },
+  {
+    "name": "web scraping app",
+    "description": "The Web Scraping App, developed with Python, BeautifulSoup, and Selenium, extracts product data from Torfs, bol.com, Gamma, and Dreamland websites. Leveraging advanced web scraping techniques, it dynamically fetches product names, prices, and descriptions. Its modular design ensures adaptability across diverse e-commerce platforms, providing users with a streamlined method to gather comprehensive product information from various online sources.",
+    "image": ["./assets/images/projectImages/webScrapingApp/image1.png","./assets/images/projectImages/webScrapingApp/image2.png"],
+    "githubLink": ["github.com/niko-brusselaers/web-scraping-prototype"],
+    "technologies": ["JavaScript","React", "Typescript", "NodeJs","Express","CSS3", "Socket-io", "MongoDB"]
   },
   {
     "name": "medialab loan tool",

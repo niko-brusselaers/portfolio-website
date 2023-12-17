@@ -28,6 +28,7 @@ export class AboutComponent {
   "Jest",
   "Express",
   "react-router",
+  "Socket-io"
   ]
   softSkills = ["Teamwork", "Communication", "Problem-solving", "Adaptability"]
 }
