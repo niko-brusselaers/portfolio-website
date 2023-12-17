@@ -1,4 +1,4 @@
 <div class="carouselContainer" [ngStyle]="{'background-image': getCurrentImage(), 'width': width, 'height': height}" [@fadeInOut]="isFading">
-  <div *ngIf="singleImage === false" class="icon-previous" (click)="selectPreviousImage();"></div>
-  <div *ngIf="singleImage === false" class="icon-next" (click)="selectNextImage();"></div>
+  <div *ngIf="singleImage === false" class="icon-previous" (click)="selectPreviousImage(); manualChangeImage()"></div>
+  <div *ngIf="singleImage === false" class="icon-next" (click)="selectNextImage(); manualChangeImage()"></div>
 </div>

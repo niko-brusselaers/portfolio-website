@@ -36,6 +36,7 @@ export class CarouselComponent implements OnChanges, OnDestroy {
   @Input() height = '100%';
   selectImage = 0;
   singleImage = false;
+  manualChange = false;
   private intervalSubscription: Subscription | undefined;
   isFading: string = 'in';
 
@@ -52,17 +53,21 @@ export class CarouselComponent implements OnChanges, OnDestroy {
   }
 
   ngAfterViewInit(): void {
-    this.startImageInterval();
+    this.ImageInterval();
   }
 
   ngOnDestroy(): void {
     this.stopImageInterval();
   }
 
-  private startImageInterval(): void {
+  private ImageInterval(): void {
     const intervalSeconds = 5; // Change this to the desired interval in seconds
     this.intervalSubscription = interval(intervalSeconds * 1000).subscribe(() => {
-      this.selectNextImage();
+      if (!this.manualChange) {
+        this.selectNextImage();
+      } else{
+        this.manualChange = false;
+      }
     });
   }
 
@@ -88,6 +93,10 @@ export class CarouselComponent implements OnChanges, OnDestroy {
       else this.selectImage = this.images.length - 1;
       this.isFading = 'in';
     }, 500);
+  }
+
+  manualChangeImage(): void {
+    this.manualChange = true;
   }
 
   getCurrentImage(): string {
