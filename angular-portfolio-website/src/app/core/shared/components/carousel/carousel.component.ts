@@ -1,19 +1,43 @@
 import { Component, Input, OnChanges, OnDestroy } from '@angular/core';
 import { Subscription, interval } from 'rxjs';
-import { databaseService } from 'src/app/core/services/databaseService';
+import { trigger, state, style, transition, animate, keyframes } from '@angular/animations';
 
 @Component({
   selector: 'app-carousel',
   templateUrl: './carousel.component.html',
-  styleUrls: ['./carousel.component.scss']
+  styleUrls: ['./carousel.component.scss'],
+  animations: [
+    trigger('fadeInOut', [
+      state('in', style({ opacity: 1 })),
+      transition('in => out', [
+        animate(
+          '0.5s',
+          keyframes([
+            style({ opacity: 1 }),
+            style({ opacity: 0 }),
+          ])
+        ),
+      ]),
+      transition('out => in', [
+        animate(
+          '0.5s',
+          keyframes([
+            style({ opacity: 0 }),
+            style({ opacity: 1 }),
+          ])
+        ),
+      ]),
+    ]),
+  ],
 })
 export class CarouselComponent implements OnChanges, OnDestroy {
   @Input() images: string[] = [];
-  @Input() width = "100%";
-  @Input() height = "100%";
+  @Input() width = '100%';
+  @Input() height = '100%';
   selectImage = 0;
   singleImage = false;
   private intervalSubscription: Subscription | undefined;
+  isFading: string = 'in';
 
   ngOnChanges(): void {
     if (this.images.length > 0) {
@@ -37,10 +61,9 @@ export class CarouselComponent implements OnChanges, OnDestroy {
 
   private startImageInterval(): void {
     const intervalSeconds = 5; // Change this to the desired interval in seconds
-    this.intervalSubscription = interval(intervalSeconds * 1000)
-      .subscribe(() => {
-        this.selectNextImage();
-      });
+    this.intervalSubscription = interval(intervalSeconds * 1000).subscribe(() => {
+      this.selectNextImage();
+    });
   }
 
   private stopImageInterval(): void {
@@ -50,16 +73,24 @@ export class CarouselComponent implements OnChanges, OnDestroy {
   }
 
   selectNextImage(): void {
-    if (this.selectImage < this.images.length - 1) this.selectImage++
-    else this.selectImage = 0
+    this.isFading = 'out';
+    setTimeout(() => {
+      if (this.selectImage < this.images.length - 1) this.selectImage++;
+      else this.selectImage = 0;
+      this.isFading = 'in';
+    }, 500); 
   }
 
   selectPreviousImage(): void {
-    if (this.selectImage > 0) this.selectImage--
-    else this.selectImage = this.images.length - 1
+    this.isFading = 'out';
+    setTimeout(() => {
+      if (this.selectImage > 0) this.selectImage--;
+      else this.selectImage = this.images.length - 1;
+      this.isFading = 'in';
+    }, 500);
   }
 
   getCurrentImage(): string {
-    return `url(${this.images[this.selectImage]})`
+    return `url(${this.images[this.selectImage]})`;
   }
 }
