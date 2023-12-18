@@ -13,7 +13,7 @@ import { RouterOutlet } from '@angular/router';
 export class AppComponent {
   title = 'angular-portfolio-website';
 
-  prepareRoute(outlet: RouterOutlet){
+  prepareRoute(outlet: RouterOutlet){    
     return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
   }
 }

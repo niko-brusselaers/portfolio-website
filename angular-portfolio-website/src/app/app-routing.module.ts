@@ -5,10 +5,11 @@ import { AboutComponent } from './core/pages/about/about.component';
 import { ProjectComponent } from './core/pages/project/project.component';
 
 const routes: Routes = [
-  {path: "", component: MainComponent, data: {animation: "isLeft"}},
-  {path: "about", component: AboutComponent, data: {animation: "isRight"}},
-  {path: "project/:projectName", component: ProjectComponent, data: {animation: "isRight"}}
+    { path: "", component: MainComponent, data: { animation: "isLeft" } },
+    { path: "about", component: AboutComponent, data: { animation: "isRight" } },
+    { path: "project/:projectName", component: ProjectComponent }
 ];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
